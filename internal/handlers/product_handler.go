@@ -3,7 +3,8 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
-	"github/stevencao-dev/gobackend/internal/models"
+
+	"github.com/stevencao-dev/gobackend/internal/models"
 )
 
 // Dummy Data for testing ppurposes
@@ -18,5 +19,5 @@ func GetProducts(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	// actually encoding to JSON to send to client
-	json.NewEncoder(w).Encode(Products)
+	json.NewEncoder(w).Encode(products)
 }

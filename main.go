@@ -1,15 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
-	"github/stevencao-dev/gobackend/internal/handlers"
+	"github.com/stevencao-dev/gobackend/internal/handlers"
 )
 
 func main() {
 	http.HandleFunc("/products", handlers.GetProducts)
 
-	fmt.Println("Backend running on :8080")
+	log.Println("Backend running on :8080")
 
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
